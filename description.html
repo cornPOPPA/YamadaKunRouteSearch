@@ -2,7 +2,8 @@
 <html lang=“ja”>
 	<head>
 		<meta charset=“UFT-8”>
-		<title>(非公式) 勇者ヤマダくん 経路探索ツール</title>
+		<title>勇者ヤマダくん 経路探索ツール (非公式)</title>
+		<link rel="shortcut icon" href="favicon.ico">
 		<style>
 			body { background: #eeeeee; font-family: "Hiragino Kaku Gothic Pro", Meiryo, sans-serif; }
 			div.mainField { background: #ffffff; width: 800px; padding: 60px; margin: 2% auto; }
@@ -12,7 +13,6 @@
 			div.history{ font-size: 80% }
 			h1 { font-size: 150%; }
 			h2 { font-size: 120%; }
-			a { text-decoration: none; }
 			a:link { color: blue; }
 			a:visited { color: blue; }
 			a:hover { color: blue; }
@@ -31,9 +31,9 @@
 					(最初の読み込みにしばらく時間がかかります。読み込まれない場合はリロードしてみてください。)</p>
 
 				<div class="attention">
-				・あくまで非公式です。公式の「勇者ヤマダくん」とは関係ありません。<br>
-				・Unity5のWebGLで出力しています。ブラウザや環境によってはうまく動作しないことがあります。<br>
-				・スマホも機種によっては一応動きます。ただ、若干挙動があやしい部分があります。
+					・あくまで非公式です。公式の「勇者ヤマダくん」とは関係ありません。<br>
+					・Unity5のWebGLで出力しています。ブラウザや環境によってはうまく動作しないことがあります。<br>
+					・スマホも機種によっては一応動きます。ただ、若干挙動があやしい部分があります。
 				</div>
 			</div>
 
@@ -44,7 +44,7 @@
 				マスの境目を押すと壁が出たり消えたりします。</p>
 
 				<p><img src="description_img/flooricon.png" class="icon"> ゆか … 普通のゆか。残してはいけない。<br>
-				<img src="description_img/inpassableicon.png" class="icon"> とおれない … どうやっても通れない。<br>
+				<img src="description_img/impassableicon.png" class="icon"> とおれない … どうやっても通れない。<br>
 				<img src="description_img/watericon.png" class="icon"> みず … 敵や障害物、お宝などは配置可能。アイテムで無効化しないと通れない。<br>
 				<img src="description_img/treasureicon.png" class="icon"> おたから … コインや宝箱。スルーしてもパーフェクト可能。<br>
 				<img src="description_img/starticon.png" class="icon"> いりぐち … ここからはじまる。<br>
@@ -61,23 +61,12 @@
 				<p><img src="description_img/bombicon.png" class="icon"> ばくだん … なにもかも嫌になったときに連打する。</p>
 
 				<div class="attention">
-					「おたからのこし」を○にした状態でお宝を山ほど配置すると、場合によっては道順の組み合わせが数千パターンになってしまい、「しらべる」を押したときに処理が長時間になってしまう可能性があります。
+					「おたからのこし」を○にした状態でお宝を山ほど配置すると、場合によっては道順の組み合わせが数千パターンになってしまい、「しらべる」を押したときに処理が少し長くなってしまう可能性があります。
 				</div>
 			</div>
 
 			<div class="section">
-				<h2>使い道は？</h2>
-
-				<p>実用性はほとんどないと思います。<br>
-				いくら考えても道順がわからなくて「デザイナーのミスやろこれ！」とブチ切れる前に使うとか<br>
-				障害物の後ろに壁があるのかないのかよく見えないのでヒトフデを始める前に一応どちらのパターンも確認しておこうという慎重派の方が使うとか<br>
-				プロヤマダー目指して道順の研究に励むとか<br>
-				そんな感じでしょうか。<br>
-				ピラミッドの落とし穴に落ちるかどうかの判定機能とかがあればよかったのになー(他人事)</p>
-			</div>
-
-			<div class="section">
-				<h2>他に注意点は？</h2>
+				<h2>注意点は？</h2>
 
 				<p>入口から出口に移動する道中で起こる変化には全く対応していません。<br>
 				例えば珍豚やUFO、ドラキュラのように突然出現したり移動したりする敵は想定していません。<br>
