@@ -3,37 +3,52 @@
 	<head>
 		<meta charset=“UFT-8”>
 		<title>勇者ヤマダくん 経路探索ツール (非公式)</title>
-		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="shortcut icon" href="TemplateData/favicon.ico">
 		<style>
-			body { background: #eeeeee; font-family: "Hiragino Kaku Gothic Pro", Meiryo, sans-serif; }
-			div.mainField { background: #ffffff; width: 800px; padding: 60px; margin: 2% auto; }
+			body { background: #eeeeee; font-family: "Hiragino Kaku Gothic Pro", 'Meiryo', sans-serif; }
+			div.mainfield { background: #ffffff; width: 800px; padding: 60px; margin: 2% auto; }
 			div.section{ padding-top: 1em; padding-bottom: 1em; }
+			div.subsection{ padding-top: 0.5em; padding-bottom: 0.5em; }
 			div.attention { background: #ffbbbb; width: 780px;  font-size: 80%; padding: 10px; margin-top: 30px; margin-bottom: 20px; margin-left: auto; margin-right: auto; }
+			div.iconlist{ overflow: hidden }
 			div.mini{ font-size: 70%; }
 			div.history{ font-size: 80% }
+			div.langselect{ float : right; font-family: sans-serif; font-size: 80%; }
 			h1 { font-size: 150%; }
 			h2 { font-size: 120%; }
-			a:link { color: blue; }
-			a:visited { color: blue; }
-			a:hover { color: blue; }
-			a:active { color: blue; }
-			img.icon { height: 1.6em; vertical-align: middle; }
-			hr.cutoffline{ 	background-color: #ffffff; border-top: 3px dashed #aaaaaa; margin-top: 20px; margin-bottom: 20px;}
+			h2.nosizechange { font-size: 100%; font-weight: normal; }
+			a { color: #22f; }
+			a:hover { color: #88f; }
+			a:active { color: #88f; }
+			a.langselect { text-decoration: none; color: #000; }
+			a.langselect:hover { color: #888; }
+			a.langselect:active { color: #888; }
+			img.icon { float: left; height: 1.6em; width: 1.6em; margin-right: 0.2em; }
+			hr.cutoffline{ background-color: #ffffff; border-top: 3px dashed #aaaaaa; margin-top: 20px; margin-bottom: 20px;}
+			ul { padding-left: 1.6em; margin: auto; }
+			ul.noindent { padding:0%; margin: 0%; }
+			li.nomarker { list-style-type: none; }
 		</style>
 	</head>
 	<body>
-		<div class="mainField">
+		<div class="mainfield">
+
+			<div class="langselect">
+				<a class="langselect" href="description_en.html">English</a> | <a class="langselect" href="description.html">日本語</a>
+			</div>
 
 			<h1><div class="mini">非公式！脱法！チート！</div>勇者ヤマダくん経路探索ツール</h1>
 
 			<div class="section">
-				<p><a href="index.html" target="_blank">YamadaKunRouteSearch</a><br>
+				<p><a href="index.html" target="_blank">DandyDungeonRouteSearch</a><br>
 					(最初の読み込みにしばらく時間がかかります。読み込まれない場合はリロードしてみてください。)</p>
 
 				<div class="attention">
-					・あくまで非公式です。公式の「勇者ヤマダくん」とは関係ありません。<br>
-					・Unity5のWebGLで出力しています。ブラウザや環境によってはうまく動作しないことがあります。<br>
-					・スマホも機種によっては一応動きます。ただ、若干挙動があやしい部分があります。
+					<ul>
+						<li>あくまで非公式です。公式の「勇者ヤマダくん」とは関係ありません。</li>
+						<li>Unity5のWebGLで出力しています。ブラウザや環境によってはうまく動作しないことがあります。</li>
+						<li>スマホも機種によっては一応動きます。ただ、若干挙動があやしい部分があります。</li>
+					</ul>
 				</div>
 			</div>
 
@@ -43,36 +58,38 @@
 				<p>右側のアイコンを好きなマスにひっぱってくると、マスの状態が変わります。<br>
 				マスの境目を押すと壁が出たり消えたりします。</p>
 
-				<p><img src="description_img/flooricon.png" class="icon"> ゆか … 普通のゆか。残してはいけない。<br>
-				<img src="description_img/impassableicon.png" class="icon"> とおれない … どうやっても通れない。<br>
-				<img src="description_img/watericon.png" class="icon"> みず … 敵や障害物、お宝などは配置可能。アイテムで無効化しないと通れない。<br>
-				<img src="description_img/treasureicon.png" class="icon"> おたから … コインや宝箱。スルーしてもパーフェクト可能。<br>
-				<img src="description_img/starticon.png" class="icon"> いりぐち … ここからはじまる。<br>
-				<img src="description_img/goalicon.png" class="icon"> でぐち … ここでおわる。<br>
-				<img src="description_img/enemyicon.png" class="icon"> てき … 一匹でも残っているとパーフェクトにならない。<br>
-				<img src="description_img/obstacleicon.png" class="icon"> しょうがいぶつ … あってもなくても結果に何の影響もない。無の存在。<br>
-				<img src="description_img/trapicon.png" class="icon"> わな … たまに敵に踏まれて消えるのがかわいい。避けてもパーフェクト可能(たぶん)。<br>
-				<img src="description_img/eventicon.png" class="icon"> イベント … 上にのったタイミングで回復したりワープしたりするマス。スルー可能(たぶん)。</p>
+				<div class="subsection">
+					<div class="iconlist"><img src="description_img/flooricon.png" class="icon">ゆか … 普通のゆか。残してはいけない。</div>
+					<div class="iconlist"><img src="description_img/impassableicon.png" class="icon">とおれない … どうやっても通れない。</div>
+					<div class="iconlist"><img src="description_img/watericon.png" class="icon">みず … 敵や障害物、お宝などは配置可能。アイテムで無効化しないと通れない。</div>
+					<div class="iconlist"><img src="description_img/treasureicon.png" class="icon">おたから … コインや宝箱。スルーしてもパーフェクト可能。</div>
+					<div class="iconlist"><img src="description_img/starticon.png" class="icon">いりぐち … ここからはじまる。</div>
+					<div class="iconlist"><img src="description_img/goalicon.png" class="icon">でぐち … ここでおわる。</div>
+					<div class="iconlist"><img src="description_img/enemyicon.png" class="icon">てき … 一匹でも残っているとパーフェクトにならない。</div>
+					<div class="iconlist"><img src="description_img/obstacleicon.png" class="icon">しょうがいぶつ … 上に同じ。</div>
+					<div class="iconlist"><img src="description_img/trapicon.png" class="icon">わな … たまに敵に踏まれて消えるのがかわいい。避けてもパーフェクト可能(たぶん)。</div>
+					<div class="iconlist"><img src="description_img/eventicon.png" class="icon">イベント … 上にのったタイミングで回復したりワープしたりするマス。スルー可能(たぶん)。</div>
+				</div>
 
-				<p><img src="description_img/leavetreasureicon.png" class="icon"> おたからのこし … コインや宝箱を残すルートも表示する。完璧主義者や吝嗇家は×にする。<br>
-				<img src="description_img/wallbreakericon.png" class="icon"> カベクズシ … 壁をすべて取り払った場合のルートも表示する。<br>
-				<img src="description_img/icemomozesicon.png" class="icon"> モモアイス … 入口でミナアイスとモモーゼを使用した場合のルートも表示する。</p>
+				<div class="subsection">
+					<div class="iconlist"><img src="description_img/leavetreasureicon.png" class="icon">おたからのこし … コインや宝箱を残すルートも表示する。完璧主義者や吝嗇家は×にする。</div>
+					<div class="iconlist"><img src="description_img/wallbreakericon.png" class="icon">カベクズシ … 壁をすべて取り払った場合のルートも表示する。</div>
+					<div class="iconlist"><img src="description_img/icemomozesicon.png" class="icon">モモアイス … 入口でミナアイスとモモーゼを使用した場合のルートも表示する。</div>
+				</div>
 
-				<p><img src="description_img/bombicon.png" class="icon"> ばくだん … なにもかも嫌になったときに連打する。</p>
+				<div class="subsection">
+					<div class="iconlist"><img src="description_img/bombicon.png" class="icon">ばくだん … なにもかも嫌になったときに連打する。</div>
+				</div>
 
 				<div class="attention">
-					「おたからのこし」を○にした状態でお宝を山ほど配置すると、場合によっては道順の組み合わせが数千パターンになってしまい、「しらべる」を押したときに処理が少し長くなってしまう可能性があります。
+					「おたからのこし」を○にした状態でお宝を山ほど配置すると、場合によっては道順の組み合わせが数千パターンになってしまい、「しらべる」を押したときに処理が若干長くなってしまう可能性があります。
 				</div>
 			</div>
 
 			<div class="section">
 				<h2>注意点は？</h2>
 
-				<p>入口から出口に移動する道中で起こる変化には全く対応していません。<br>
-				例えば珍豚やUFO、ドラキュラのように突然出現したり移動したりする敵は想定していません。<br>
-				さらに敵に対する遠距離攻撃も一切考慮に入れていないため、敵を水の中に配置した場合はミナアイス・モモーゼを使って実際にそのマスを通過するしかパーフェクトにする方法がありません。<br>
-				さらにさらに敵メイジが使うミナアイスもないことにしています。<br>
-				出口の巻物は知らん！ピラミッドの罠とかも知らん！<br>
+				<p>入口から出口に移動する道中で起こる変化には全く対応していません。例えば珍豚やUFO、ドラキュラのように突然出現したり移動したりする敵は想定していません。さらに敵に対する遠距離攻撃も一切考慮に入れていないため、敵を水の中に配置した場合はミナアイス・モモーゼを使って実際にそのマスを通過するしかパーフェクトにする方法がありません。さらにさらに敵メイジが使うミナアイスもないことにしています。出口の巻物は知らん！ピラミッドの罠とかも知らん！<br>
 				<br>
 				その他もろもろ、パーフェクト判定の仕様などでも勘違いがあるかもしれません。あんまり信じないでネ。</p>
 			</div>
@@ -81,12 +98,16 @@
 
 			<div class="section">
 				<div class="history">
-					<p>更新履歴<br>
-						Dec 23, 2016: 探索処理が長時間になる場合は進捗を表示し途中でキャンセルができるように変更<br>
-						Dec 22, 2016: タッチスクリーンでの操作がおかしくなるのを一応対策, 道順の描画速度がフレームレートの影響をうけないよう修正<br>
-						Sep 25, 2016: 一部の壁のフラグ設定がおかしくなっていたのを修正<br>
-						Sep 23, 2016: リセットしやすいよう爆発までの回数を変更<br>
-						Sep 20, 2016: 公開<p>
+					<h2 class="nosizechange">更新履歴</h2>
+					<ul class="noindent">
+						<li class="nomarker">Feb 11, 2017: 水の中に障害物を残した状態ではパーフェクトをとれない仕様に変更</li>
+						<li class="nomarker">Jan 18, 2017: 探索処理にかかる時間を短縮</li>
+						<li class="nomarker">Dec 23, 2016: 探索処理が長時間になる場合は進捗を表示し途中でキャンセルができるように変更</li>
+						<li class="nomarker">Dec 22, 2016: タッチスクリーンでの操作がおかしくなるのを一応対策, 道順の描画速度がフレームレートの影響をうけないよう修正</li>
+						<li class="nomarker">Sep 25, 2016: 一部の壁のフラグ設定がおかしくなっていたのを修正</li>
+						<li class="nomarker">Sep 23, 2016: リセットしやすいよう爆発までの回数を変更</li>
+						<li class="nomarker">Sep 20, 2016: 公開</li>
+					</ul>
 				</div>
 			</div>
 		</div>

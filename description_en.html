@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang=“en”>
+	<head>
+		<meta charset=“UFT-8”>
+		<title>Dandy Dungeon: Legend of Brave Yamada Route Search Tool (Unofficial)</title>
+		<link rel="shortcut icon" href="TemplateData/favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+		<style>
+			body { background: #eeeeee; font-family: 'Nunito', 'Meiryo', Arial, sans-serif; }
+			div.mainfield { background: #ffffff; width: 800px; padding: 60px; margin: 2% auto; }
+			div.section{ padding-top: 1em; padding-bottom: 1em; }
+			div.subsection{ padding-top: 0.5em; padding-bottom: 0.5em; }
+			div.attention { background: #ffbbbb; width: 780px;  font-size: 80%; padding: 10px; margin-top: 30px; margin-bottom: 20px; margin-left: auto; margin-right: auto; }
+			div.iconlist{ overflow: hidden; }
+			div.mini{ font-size: 70%; }
+			div.history{ font-size: 80% }
+			div.langselect{ float : right; font-family: sans-serif; font-size: 80%; }
+			h1 { font-size: 150%; }
+			h2 { font-size: 120%; }
+			h2.nosizechange { font-size: 100%; font-weight: normal; }
+			a { color: #22f; }
+			a:hover { color: #88f; }
+			a:active { color: #88f; }
+			a.langselect { text-decoration: none; color: #000; }
+			a.langselect:hover { color: #888; }
+			a.langselect:active { color: #888; }
+			img.icon { float: left; height: 1.6em; width: 1.6em; margin-right: 0.2em; }
+			hr.cutoffline{ background-color: #ffffff; border-top: 3px dashed #aaaaaa; margin-top: 20px; margin-bottom: 20px; }
+			ul { padding-left: 1.6em; margin: auto; }
+			ul.noindent { padding:0%; margin: 0%; }
+			li.nomarker { list-style-type: none; }
+		</style>
+	</head>
+	<body>
+		<div class="mainfield">
+
+			<div class="langselect">
+				<a class="langselect" href="description_en.html">English</a> | <a class="langselect" href="description.html">日本語</a>
+			</div>
+
+			<h1><div class="mini">It's unofficial! It's quasi-legal! It's cheating!</div>Dandy Dungeon Route Search Tool</h1>
+
+			<div class="section">
+				<p><a href="index.html?lang=en" target="_blank">DandyDungeonRouteSearch</a><br>
+					(Loading could take a while. If the tool doesn't start, please reload the page.)</p>
+
+				<div class="attention">
+					<ul>
+						<li>This tool is unofficial and has nothing to do with the original Dandy Dungeon app or Onion Games.</li>
+						<li>This tool is built as a WebGL project with Unity5. It may not work properly depending on your browsers or systems.</li>
+						<li>This tool is designed to be run on PC. It should also run on smartphones or tablets, but may be laggy and unstable.</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="section">
+				<h2>How To Use</h2>
+
+				<p>Drag an icon from right side and drop it on a square to change its state.<br>
+				Click between squares to place/remove walls.</p>
+
+				<div class="subsection">
+					<div class="iconlist"><img src="description_img/flooricon.png" class="icon">Floor ... Just another floor. You need to walk on every floor to get a perfect bonus.</div>
+					<div class="iconlist"><img src="description_img/impassableicon.png" class="icon">No Entry ... You can never pass through it.</div>
+					<div class="iconlist"><img src="description_img/watericon.png" class="icon">Water ... Only enemies, obstacles, and treasure can be placed on it. You can't pass through it unless Ice-all or Momoze is used on it.</div>
+					<div class="iconlist"><img src="description_img/treasureicon.png" class="icon">Treasure ... Coins or treasure chests. You don't have to pick up all to get a perfect bonus.</div>
+					<div class="iconlist"><img src="description_img/starticon.png" class="icon">Start ... Starts here.</div>
+					<div class="iconlist"><img src="description_img/goalicon.png" class="icon">Goal ... Ends here.</div>
+					<div class="iconlist"><img src="description_img/enemyicon.png" class="icon">Enemy ... You can't leave them behind to get a perfect bonus.</div>
+					<div class="iconlist"><img src="description_img/obstacleicon.png" class="icon">Obstacle ... Same as enemies.</div>
+					<div class="iconlist"><img src="description_img/trapicon.png" class="icon">Trap ... Enemies sometimes step on it and vanish it. How lovely. You can still get a perfect bonus with avoiding it.</div>
+					<div class="iconlist"><img src="description_img/eventicon.png" class="icon">Event ... Some heal you and some teleport you. You don't have to step on it to get a perfect bonus.</div>
+				</div>
+
+				<div class="subsection">
+					<div class="iconlist"><img src="description_img/leavetreasureicon.png" class="icon">Leave treasure behind ... This option allows you to view the routes where coins or chests are left behind. If you are a miser or a perfectionist, keep it with an 'X'.</div>
+					<div class="iconlist"><img src="description_img/wallbreakericon.png" class="icon">Blockbuster ... This option allows you to view the routes where all walls are removed.</div>
+					<div class="iconlist"><img src="description_img/icemomozesicon.png" class="icon">Momoze+Ice-all ... This option allows you to view the routes where Ice-all and/or Momoze scrolls are used.</div>
+				</div>
+
+				<div class="subsection">
+					<div class="iconlist"><img src="description_img/bombicon.png" class="icon">Reset bomb ... Smash it when you feel despair.</div>
+				</div>
+
+				<div class="attention">
+					If you turn on the "leave treasure behind" option and place a ton of treasure, the route search process may take a bit long time since the number of results will be thousands.
+				</div>
+			</div>
+
+			<div class="section">
+				<h2>Notice</h2>
+
+				<p>The route search process doesn't care about changes which you make along the way to the goal. So enemies that pop up or move around such as pigs, roaches or UFOs are all out of consideration. Besides, your ranged attacks are not considered either, so if you place an enemy in water, you can never find an answer without using Ice-all or Momoze scrolls. Ice-all spells cast by enemy mages are also ignored. Exit scrolls? Traps in Golden Pyramid? Let's forget about tham :P<br>
+				<br>
+				There might be some mistakes, so don't fully depend on it.</p>
+			</div>
+
+			<hr class="cutoffline">
+
+			<div class="section">
+				<div class="history">
+					<h2 class="nosizechange">Update History</h2>
+					<ul class="noindent">
+						<li class="nomarker">Feb 11, 2017: Changed obstacles to be treated in the same way as enemies</li>
+						<li class="nomarker">Jan 18, 2017: Improved the search speed</li>
+						<li class="nomarker">Dec 23, 2016: Added a progress bar and now you can cancel searching if needed</li>
+						<li class="nomarker">Dec 22, 2016: Slightly improved a touchscreen control, fixed the result-displaying speed unintentionally affected by the frame rate</li>
+						<li class="nomarker">Sep 25, 2016: Fixed a setting error on a wall</li>
+						<li class="nomarker">Sep 23, 2016: Changed the necessary number of clicks to explode the reset bomb</li>
+						<li class="nomarker">Sep 20, 2016: Released</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

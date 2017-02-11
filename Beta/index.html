@@ -1,34 +1,40 @@
 <!doctype html>
 <html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | YamadaKunRouteSearch</title>
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
-    <script src="TemplateData/UnityProgress.js"></script>
-  </head>
-  <body class="template">
-    <p class="header"><span>Unity WebGL Player | </span>YamadaKunRouteSearch</p>
-    <div class="template-wrap clear">
-      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="540px" width="960px"></canvas>
-      <br>
-      <div class="logo"></div>
-      <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
-      <div class="title">YamadaKunRouteSearch</div>
-    </div>
-    <p class="footer">&laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;</p>
-    <script type='text/javascript'>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>DandyDungeonRouteSearch | Unity WebGL Player</title>
+		<link rel="stylesheet" href="TemplateData/style.css">
+		<link rel="shortcut icon" href="TemplateData/favicon.ico" />
+		<script src="TemplateData/UnityProgress.js"></script>
+	</head>
+	<body class="template">
+		<p class="header">DandyDungeonRouteSearch | Unity WebGL Player</p>
+		<div class="template-wrap clear">
+			<div class="langselect">
+				<a href="index.html?lang=en">English</a> | <a href="index.html">日本語</a>
+			</div>
+			<br>
+			<canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="540" width="960"></canvas>
+			<br>
+			<div class = "urldisplay" >
+				<span id="urldisplay"><span>
+			</div>
+			<div class="title">DandyDungeonRouteSearch</div>
+		</div>
+		<p class="footer">&laquo; created with <a href="http://unity3d.com/" title="Go to unity3d.com">Unity</a> &raquo;</p>
+		<script type='text/javascript'>
   var Module = {
     TOTAL_MEMORY: 67108864,
     errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
     compatibilitycheck: null,
-    dataUrl: "Release/ver_04.data",
-    codeUrl: "Release/ver_04.js",
-    memUrl: "Release/ver_04.mem",
+    dataUrl: "Release/ver_06.data",
+    codeUrl: "Release/ver_06.js",
+    memUrl: "Release/ver_06.mem",
   };
 </script>
 <script src="Release/UnityLoader.js"></script>
 
-  </body>
+		<script src="ParameterCheck.js"></script>
+	</body>
 </html>
